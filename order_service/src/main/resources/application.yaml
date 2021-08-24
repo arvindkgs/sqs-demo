@@ -1,0 +1,10 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: us-west-2
+    credentials:
+      useDefaultAwsCredentialsChain: true
+
+queue-name: demo
