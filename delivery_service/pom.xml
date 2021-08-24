@@ -28,12 +28,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.arvindkgs</groupId>
-			<artifactId>order-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
 		<!--lombok-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

@@ -4,7 +4,7 @@ package com.arvindkgs.delivery;
  *
  */
 
-import com.arvindkgs.order.data.Order;
+import com.arvindkgs.delivery.data.Order;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.aws.messaging.listener.Acknowledgment;
@@ -24,12 +24,10 @@ public class MessageReceiver {
     }
 
     @Async("threadPoolExecutor")
-    @SqsListener(value = "${queue-name}", deletionPolicy = SqsMessageDeletionPolicy.NEVER)
-    public void receiveStringMessage(final String message,
-                                     Acknowledgment acknowledgment) throws Exception {
-        acknowledgment.acknowledge().get();
+    @SqsListener(value = "${queue-name}", deletionPolicy = SqsMessageDeletionPolicy.ON_SUCCESS)
+    public void receiveStringMessage(final String message) throws Exception {
         Order order = gson.fromJson(message, Order.class);
-        System.out.println("Delivering Order("+order.getOrderId()+")");
+        System.out.println("Thread: "+Thread.currentThread().getName()+": Delivering Order("+order.getOrderId()+")");
     }
 
 }
