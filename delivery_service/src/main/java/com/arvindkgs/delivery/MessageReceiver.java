@@ -4,7 +4,7 @@ package com.arvindkgs.delivery;
  *
  */
 
-import com.arvindkgs.delivery.data.Order;
+import com.arvindkgs.order.data.Order;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.aws.messaging.listener.Acknowledgment;

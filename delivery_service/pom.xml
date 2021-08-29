@@ -47,11 +47,10 @@
 			<version>2.1.2.RELEASE</version>
 		</dependency>
 
-		<!--stripe-->
 		<dependency>
-			<groupId>com.stripe</groupId>
-			<artifactId>stripe-java</artifactId>
-			<version>20.45.0</version>
+			<groupId>com.arvindkgs</groupId>
+			<artifactId>order-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<!--gson-->
